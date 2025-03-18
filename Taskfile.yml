@@ -1,0 +1,49 @@
+version: "3"
+
+tasks:
+  list:
+    cmds:
+      - task --list-all
+  down_all:
+    cmds:
+      - task db_down
+      - task api_down
+  db_up:
+    dir: "./Postgress"
+    preconditions:
+      - test -f docker-compose.yaml
+    cmds:
+      - docker-compose up -d
+  db_down:
+    dir: "./Postgress"
+    preconditions:
+      - test -f docker-compose.yaml
+    cmds:
+      - docker-compose down
+  db_restart:
+    dir: "./Postgress"
+    preconditions:
+      - test -f docker-compose.yaml
+    cmds:
+      - docker-compose restart
+  api_up:
+    dir: "./Python/FastAPI - BE"
+    preconditions: 
+      - test -f docker-compose.yaml
+    cmds:
+      - docker-compose up -d
+  api_down:
+    dir: "./Python/FastAPI - BE"
+    preconditions: 
+      - test -f docker-compose.yaml
+    cmds:
+      - docker-compose down
+  api_restart:
+    dir: "./Python/FastAPI - BE"
+    preconditions: 
+      - test -f docker-compose.yaml
+    cmds:
+      - docker-compose restart
+  
+
+  

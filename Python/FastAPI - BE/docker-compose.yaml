@@ -1,0 +1,13 @@
+services:
+  fastapi-be:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: 'uvicorn main:app --host 0.0.0.0 --port 8080 --reload'
+    env_file:
+      - ./.env
+    volumes:
+      - ./main:app
+    restart: always
+    ports:
+      - "8080:8080"
