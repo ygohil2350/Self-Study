@@ -1,0 +1,2 @@
+To create React app with typescript we need to follow the below commands
+1. npx create-react-app app-name --template typescript

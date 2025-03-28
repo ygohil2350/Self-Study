@@ -1,0 +1,26 @@
+To create Express app with typescript we need to follow the below commands
+1. npm init -y 
+2. npm i -D typescript  @types/express
+3. npm i express nodemon ts-node
+
+4. create tsconfig.json file to have ts rules
+```
+{
+    "compilerOptions": {
+      "target": "ES2016",
+      "module": "CommonJS",                              
+      "rootDir": "./src",                              
+      "outDir": "./dist",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "skipLibCheck": true
+    }
+}
+```
+5. update package json for running scripts like dev and build
+
+```
+dev:"nodemon ./src/index.ts"
+build:"tsc --build"
+```

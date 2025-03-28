@@ -1,3 +1,5 @@
 Python/FastAPI - BE/__pycache__
 .venv/*
 Postgress/local_pgdata
+TypeScript/ExpressJS/practice-node-app/node_modules
+TypeScript/ReactJS/practice-react-app/node_modules
