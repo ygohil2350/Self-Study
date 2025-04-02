@@ -24,3 +24,4 @@ To create Express app with typescript we need to follow the below commands
 dev:"nodemon ./src/index.ts"
 build:"tsc --build"
 ```
+6. now we can run the express project directly but `npm run dev`

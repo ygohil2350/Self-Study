@@ -1,0 +1,36 @@
+-- TABLE Actions
+
+-- Create Table with schema
+CREATE TABLE student(
+id VARCHAR(10) primary key, name VARCHAR(50), class INT 
+)
+
+-- Drop Table (delete table with schema and table structure)
+DROP TABLE student 
+
+-- Truncate Table (delete table rows only where schema and table structure will not be affected)
+TRUNCATE TABLE student
+
+
+-- Rows Action
+
+-- Add Rows in table 
+INSERT INTO student (id, name,class) VALUES ('1', 'John G',9);
+INSERT INTO student (id, name,class) VALUES ('2', 'Scarlet G',9);
+
+-- READ all column and all rows
+SELECT * FROM student;
+
+-- READ all column with some condition 
+SELECT * from student WHERE class > 8;
+
+-- READ specific column 
+SELECT name, class FROM student;
+
+-- UPDATE
+UPDATE student SET name = 'Joe G' WHERE id='1';
+
+-- DELETE
+DELETE FROM student WHERE id='1';
+
+
